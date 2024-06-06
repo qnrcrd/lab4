@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+  }
+
+  .container {
+    display: flex;
+    gap: 50px;
+  }
+
+  .box {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+  }
+
+  /* color change*/
+  .box-color-change:hover {
+    background-color: #3e8e41;
+    transition: background-color 0.5s ease-in-out;
+  }
+
+  /* turning around */
+  .box-rotate {
+    animation: rotate 3s linear infinite;
+  }
+
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* pulse */
+  .box-pulse {
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+  /* in circle */
+  .box-circle {
+    animation: circle 5s linear infinite;
+  }
+
+  @keyframes circle {
+    0% { transform: translateX(0) translateY(0); }
+    25% { transform: translateX(100px) translateY(0); }
+    50% { transform: translateX(100px) translateY(100px); }
+    75% { transform: translateX(0) translateY(100px); }
+    100% { transform: translateX(0) translateY(0); }
+  }
+
+  /* fall */
+  .box-fall {
+    animation: fall 2s ease-in-out forwards;
+    position: relative;
+    top: 0;
+  }
+
+  @keyframes fall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(200px); }
+  }
